@@ -6,9 +6,11 @@ import java.util.List;
 import com.myprograms.arrayrotation.ArrayRotation;
 import com.myprograms.factorial.Factorial;
 import com.myprograms.find_maximum_sum.FindMaximumSum;
+import com.myprograms.find_min_element.MinimumElementInRotated;
 import com.myprograms.find_pair_having_sum.FindingPair;
 import com.myprograms.find_pair_having_sum.FindingPairRotated;
 import com.myprograms.gcd.GCD;
+import com.myprograms.hamming_distance.HammingDistance;
 import com.myprograms.prime_factorization_recursive.PrimeFactorizationRecursive;
 import com.myprograms.search_in_rotated_array.SearchInRotated;
 import com.myprograms.tailrecursionfactorial.TailRecursionFactorial;
@@ -31,7 +33,8 @@ public class MyProgramMain {
 //		arr = rotation.rotateLeftUsingTempArray(arr, 2);
 //		arr = rotation.rotateLeftOneByOneStep(arr, 7);
 //		arr = rotation.rotateJugglingAlgo(arr, 3);
-//		arr = rotation.rotateReversalAlgo(arr, 7);
+//		arr = rotation.rotateLeftReversalAlgo(arr, 7);
+//		arr = rotation.rotateRightReversalAlgorithm(arr, 3);
 //		for (Integer i : arr) {
 //			System.out.println(i);
 //		}
@@ -62,8 +65,19 @@ public class MyProgramMain {
 //		else
 //			System.out.println("no such pair");
 		
-		Integer[] arr = new Integer[] {10, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-		FindMaximumSum maximumSum = new FindMaximumSum();
-		System.out.println(maximumSum.findMaximumValueOfSum(arr));
+//		Integer[] arr = new Integer[] {10, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+//		FindMaximumSum maximumSum = new FindMaximumSum();
+//		System.out.println(maximumSum.findMaximumValueOfSum(arr));
+		
+//		Integer arr[] = new Integer[] {1, 2, 3, 4, 5, -6};
+//		MinimumElementInRotated minimumElement = new MinimumElementInRotated();
+//		System.out.println(minimumElement.findMinimumElementInRotatedArray(arr));
+		
+		Integer arr[] = new Integer[] {2,4,8,0,4,45};
+		HammingDistance hammingDistance = new HammingDistance();
+		hammingDistance.findArrayHavingMaximumHammingDistance(arr);
+		for(int i : arr) {
+			System.out.print(i+" ");
+		}
 	}
 }

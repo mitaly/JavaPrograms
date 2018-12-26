@@ -42,7 +42,7 @@ public class ArrayRotation {
 //		}
 //		return arr;
 //	}
-	public Integer[] rotateReversalAlgo(Integer[] arr, int d) {
+	public Integer[] rotateLeftReversalAlgo(Integer[] arr, int d) {
 		reverseArray(arr, 0, d-1);
 		reverseArray(arr, d, arr.length-1);
 		reverseArray(arr, 0, arr.length-1);
@@ -59,6 +59,12 @@ public class ArrayRotation {
 	}
 	private boolean isPositive(int n) {
 		return n>=0;
+	}
+	public Integer[] rotateRightReversalAlgorithm(Integer[] arr, int d) {
+		reverseArray(arr, 0, arr.length-1);
+		reverseArray(arr, 0, d-1);
+		reverseArray(arr, d, arr.length-1);
+		return arr;
 	}
 }
 	
