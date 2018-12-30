@@ -3,16 +3,19 @@ package com.myprograms;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.myprograms.arrayrotation.ArrayRotation;
+import com.myprograms.arrayrotations.ArrayRotation;
+import com.myprograms.arrayrotations.ElementAtIndexAfterRotation;
+import com.myprograms.arrayrotations.FindMaximumSum;
+import com.myprograms.arrayrotations.FindingPair;
+import com.myprograms.arrayrotations.FindingPairRotated;
+import com.myprograms.arrayrotations.HammingDistance;
+import com.myprograms.arrayrotations.MinimumElementInRotated;
+import com.myprograms.arrayrotations.PrintLeftRotatedArray;
+import com.myprograms.arrayrotations.SearchInRotated;
+import com.myprograms.arrayrotations.SplitAndAddToEnd;
 import com.myprograms.factorial.Factorial;
-import com.myprograms.find_maximum_sum.FindMaximumSum;
-import com.myprograms.find_min_element.MinimumElementInRotated;
-import com.myprograms.find_pair_having_sum.FindingPair;
-import com.myprograms.find_pair_having_sum.FindingPairRotated;
 import com.myprograms.gcd.GCD;
-import com.myprograms.hamming_distance.HammingDistance;
 import com.myprograms.prime_factorization_recursive.PrimeFactorizationRecursive;
-import com.myprograms.search_in_rotated_array.SearchInRotated;
 import com.myprograms.tailrecursionfactorial.TailRecursionFactorial;
 
 public class MyProgramMain {
@@ -73,11 +76,27 @@ public class MyProgramMain {
 //		MinimumElementInRotated minimumElement = new MinimumElementInRotated();
 //		System.out.println(minimumElement.findMinimumElementInRotatedArray(arr));
 		
-		Integer arr[] = new Integer[] {2,4,8,0,4,45};
-		HammingDistance hammingDistance = new HammingDistance();
-		hammingDistance.findArrayHavingMaximumHammingDistance(arr);
-		for(int i : arr) {
+//		Integer arr[] = new Integer[] {2,4,8,0,4,45};
+//		HammingDistance hammingDistance = new HammingDistance();
+//		hammingDistance.findArrayHavingMaximumHammingDistance(arr);
+//		for(int i : arr) {
+//			System.out.print(i+" ");
+//		}
+		
+//		Integer[] arr = new Integer[] {1, 3, 5, 7, 9};
+//		PrintLeftRotatedArray print = new PrintLeftRotatedArray();
+//		print.printAndRotateLeft(arr, 1);
+		
+//		Integer[] arr = new Integer[] {1, 2, 3, 4, 5};
+//		Integer[][] rotationsArr = new Integer[][] {{0,2},{2,4}};
+//		ElementAtIndexAfterRotation find = new ElementAtIndexAfterRotation();
+//		System.out.println(find.findElementAtGivenIndex(arr, rotationsArr, 4));
+		
+		Integer[] arr = new Integer[] {12,10,34,455,566};
+		SplitAndAddToEnd splitAndAdd = new SplitAndAddToEnd();
+//		splitAndAdd.splitAndAddArrayToEnd(arr, 4);
+		splitAndAdd.splitAndAddUsingRotation(arr, 0);
+		for(int i : arr)
 			System.out.print(i+" ");
-		}
 	}
 }

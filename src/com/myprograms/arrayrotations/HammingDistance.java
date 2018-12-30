@@ -1,4 +1,4 @@
-package com.myprograms.hamming_distance;
+package com.myprograms.arrayrotations;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package com.myprograms.find_min_element;
+package com.myprograms.arrayrotations;
 
 public class MinimumElementInRotated {
 	public Integer findMinimumElementInRotatedArray(Integer[] arr){

@@ -1,4 +1,4 @@
-package com.myprograms.search_in_rotated_array;
+package com.myprograms.arrayrotations;
 
 public class SearchInRotated {
 	public int searchInRotatedArray(Integer[] arr, int element) {

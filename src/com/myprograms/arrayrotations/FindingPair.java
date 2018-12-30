@@ -1,4 +1,4 @@
-package com.myprograms.find_pair_having_sum;
+package com.myprograms.arrayrotations;
 
 public class FindingPair {
 	public int[] findPairHavingSum(Integer[] arr, int sum) {

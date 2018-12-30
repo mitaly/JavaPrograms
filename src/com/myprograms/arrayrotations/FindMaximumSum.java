@@ -1,4 +1,4 @@
-package com.myprograms.find_maximum_sum;
+package com.myprograms.arrayrotations;
 
 public class FindMaximumSum {
 	public int findMaximumValueOfSum(Integer[] arr) {

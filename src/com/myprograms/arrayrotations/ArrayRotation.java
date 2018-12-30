@@ -1,4 +1,4 @@
-package com.myprograms.arrayrotation;
+package com.myprograms.arrayrotations;
 
 import com.myprograms.gcd.GCD;
 
