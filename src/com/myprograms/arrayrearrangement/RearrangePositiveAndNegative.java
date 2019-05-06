@@ -3,6 +3,7 @@ package com.myprograms.arrayrearrangement;
 import java.io.IOException;
 
 public class RearrangePositiveAndNegative {
+	//does not guarantee relative ordering of elements
 	public void rearrangePositiveAndNegativeNumbers(Integer[] arr) {
 		int i = partitionPositiveAndNegative(arr);
 		int pos = i+1, neg = 0;
@@ -14,6 +15,7 @@ public class RearrangePositiveAndNegative {
 			pos++;
 		}
 	}
+	//using partitioning tech of quicksort algo.
 	public int partitionPositiveAndNegative(Integer[] arr) {
 		int x = 0, i = -1, j = 0;
 		for(; j<arr.length; j++) {

@@ -1,6 +1,10 @@
 package com.myprograms.arrayrearrangement;
 
 public class RearrangePositiveAndNegative1 {
+	//O(n2) time
+	//using rotate right method
+	//negative and positive numbers at alternative positions
+	//relative ordering is maintained
 	public void rearrangePositiveAndNegativeNumbers(Integer[] arr) {
 		for(int i = 0; i<arr.length;i++ ) {
 			if(i%2 == 0 && arr[i] >= 0 ) {

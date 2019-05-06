@@ -1,29 +1,11 @@
 package com.myprograms;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-import com.myprograms.arrayrearrangement.MinSwaps;
-import com.myprograms.arrayrearrangement.MoveZerosToEnd;
-import com.myprograms.arrayrearrangement.RearrangeAccToIndex;
-import com.myprograms.arrayrearrangement.RearrangeEvenAndOddIndexes;
-import com.myprograms.arrayrearrangement.RearrangePositiveAndNegative;
-import com.myprograms.arrayrearrangement.RearrangePositiveAndNegative1;
-import com.myprograms.arrayrearrangement.ReverseArray;
-import com.myprograms.arrayrotations.ArrayRotation;
-import com.myprograms.arrayrotations.ElementAtIndexAfterRotation;
-import com.myprograms.arrayrotations.FindMaximumSum;
-import com.myprograms.arrayrotations.FindingPair;
-import com.myprograms.arrayrotations.FindingPairRotated;
-import com.myprograms.arrayrotations.HammingDistance;
-import com.myprograms.arrayrotations.MinimumElementInRotated;
-import com.myprograms.arrayrotations.PrintLeftRotatedArray;
-import com.myprograms.arrayrotations.SearchInRotated;
-import com.myprograms.arrayrotations.SplitAndAddToEnd;
-import com.myprograms.factorial.Factorial;
-import com.myprograms.gcd.GCD;
-import com.myprograms.prime_factorization_recursive.PrimeFactorizationRecursive;
-import com.myprograms.tailrecursionfactorial.TailRecursionFactorial;
+import com.myprograms.gp.CountTriplets;
+import com.myprograms.graphs.DFSGraph;
+import com.myprograms.linkedlist.LinkedListOperations;
 
 public class MyProgramMain {
 	public static void main(String[] args) {
@@ -144,15 +126,82 @@ public class MyProgramMain {
 //		Move all zeroes to end of array
 //		Integer arr[] = new Integer[] {0, 1, 9, 8, 4, 0, 0, 2, 7, 0, 6, 0, 9};
 //		MoveZerosToEnd moveZeroes = new MoveZerosToEnd();
-////		moveZeroes.moveZeroesToEnd(arr);
-////		moveZeroes.moveZeroesToEnd1(arr);
+//		moveZeroes.moveZeroesToEnd(arr);
+//		moveZeroes.moveZeroesToEnd1(arr);
 //		moveZeroes.moveZeroesToEnd2(arr);
 //		for(int x:arr) System.out.print(x+" ");
 		
 //		Minimum swaps required to bring all elements less than or equal to k together
-		Integer arr[] = new Integer[] {2, 7, 9, 5, 8, 7, 4};
-		int k = 5;
-		MinSwaps minSwaps = new MinSwaps();
-		System.out.println(minSwaps.minSwaps(arr, k));
+//		Integer arr[] = new Integer[] {2, 7, 9, 5, 8, 7, 4};
+//		int k = 10;
+//		MinSwaps minSwaps = new MinSwaps();
+//		System.out.println(minSwaps.minSwaps1(arr, k));
+		
+//		arrange them such that all negative integers appear before all the positive integers in the array without using any additional data structure like hash table, arrays, etc. 
+//		The order of appearance should be maintained.
+//		move zeroes(if present) between positive and negative numbers
+//		Integer arr[] = new Integer[] {12,0, 11, 0, 5, 6, 7, 5, 3, 6};
+//		RearrangePositiveAndNegative2 rearrange = new RearrangePositiveAndNegative2();
+//		rearrange.rearrangePositiveAndNegativeNumbers(arr);
+//		for(int x:arr) System.out.print(x+" ");
+		
+		
+//		Convert the array in such a way that if next non-zero number is same as current number,
+//		double its value and replace the next number with 0.
+//		After the modification, rearrange the array such that all 0’s are shifted to the end.
+//		Integer[] arr = new Integer[] {2, 2, 0, 4, 0, 8};
+//		DoubleAndZero doubleAndZero = new DoubleAndZero();
+//		doubleAndZero.doubleAndMoveZeroesToEnd(arr);
+//		for(int x:arr) System.out.print(x+" ");
+	
+//		Given two integer arrays of same size, “arr[]” and “index[]”,
+//		reorder elements in “arr[]” according to given index array
+//		Integer[] arr = new Integer[] {50, 40, 70, 60, 90};
+//		Integer[] index = new Integer[] {3,  0,  4,  1,  2};
+//		ReorderAccToIndex reorder = new ReorderAccToIndex();
+////		reorder.reorderUsingAuxiliaryArr(arr, index);
+//		reorder.reorderWithoutAuxiliaryArr(arr, index);
+//		for(int x:arr) System.out.print(x+" ");
+		
+//		Given an array of positive and negative numbers, arrange them 
+//		such that all negative integers appear before all the positive integers
+//		relative order should be maintained
+//		Integer[] arr = new Integer[] {12, 11, -13, -5, 6, -7, 5, -3, -6};
+//		RearrangePositiveAndNegative3 rearrange = new RearrangePositiveAndNegative3();
+//		rearrange.rearrange(arr);
+//		for(int x:arr) System.out.print(x+" ");
+		
+//		Rearrange an array such that ‘arr[j]’ becomes ‘i’ if ‘arr[i]’ is ‘j’ 
+//		Integer[] arr = new Integer[] {2, 0, 1, 4, 5, 3};
+//		RearrangeAccToIndex1 r = new RearrangeAccToIndex1();
+//		r.rearrange(arr);
+//		for(int x:arr) System.out.print(x+" ");
+		
+		//Count triplets
+//		List<Long> list = Arrays.asList(1L,1L, 1L, 1L, 1L);
+//		CountTriplets triplets = new CountTriplets();
+//		System.out.println(triplets.countTriplets(list, 1));
+		
+//		LinkedListOperations op = new LinkedListOperations();
+//		op.insertAtStart(23);
+//		op.insertAtStart(4556);
+//		op.insertAtStart(12);
+//		op.insertAtEnd(90);
+//		op.insertAfterData(912, 0);
+//		op.insertAtEnd(7);
+//		
+//		op.printList();
+		
+		
+		/* ---------------------Graph---------------------------------------*/
+		//DFS
+		DFSGraph graph = new DFSGraph(4, 2);
+		graph.addEdge(0, 1);
+		graph.addEdge(0, 2);
+		graph.addEdge(1, 2);
+		graph.addEdge(2, 0);
+		graph.addEdge(2, 3);
+		graph.addEdge(3, 3);
+		graph.dfs();
 	}
 }
