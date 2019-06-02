@@ -11,6 +11,7 @@ import com.myprograms.graphs.DFSCycleDetection;
 import com.myprograms.graphs.DFSGraph;
 import com.myprograms.graphs.Kruskal;
 import com.myprograms.graphs.Prims;
+import com.myprograms.graphs.Prims.Graph;
 import com.myprograms.linkedlist.LinkedListOperations;
 
 public class MyProgramMain {
@@ -221,7 +222,36 @@ public class MyProgramMain {
         g.addEdge(2, 3); 
         g.addEdge(3, 3);
         g.bfs();*/
-	
+		
+		
+		//Prims for min
+		/*Graph graph = new Graph(6);
+		Prims prims = new Prims(graph);
+		graph.addEdge(0, 1, 6);
+		graph.addEdge(0, 2, 1);
+		graph.addEdge(0, 3, 5);
+		
+		graph.addEdge(1, 0, 6);
+		graph.addEdge(1, 2, 3);
+		graph.addEdge(1, 4, 3);
+		
+		graph.addEdge(2, 0, 1);
+		graph.addEdge(2, 3, 5);
+		graph.addEdge(2, 1, 3);
+		graph.addEdge(2, 5, 4);
+		
+		graph.addEdge(3, 0, 5);
+		graph.addEdge(3, 2, 5);
+		graph.addEdge(3, 5, 2);
+		
+		graph.addEdge(4, 5, 6);
+		graph.addEdge(4, 1, 3);
+		
+		graph.addEdge(5, 2, 4);
+		graph.addEdge(5, 3, 2);
+		graph.addEdge(5, 4, 6);
+		prims.findMinimumSpanningTree(0);*/
+		
 		//Kruskal for minimum spanning tree
 		/*Kruskal.Graph graph = new Kruskal.Graph(4);
 		graph.addEdge(0, 1, 10);
