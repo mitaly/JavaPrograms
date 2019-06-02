@@ -2,33 +2,36 @@ package com.myprograms.graphs;
 
 import java.util.LinkedList;
 
-public class DFSGraph{
+public class BFSGraph {
 	private int nodes;
 	private int startNode;
 	private LinkedList<Integer> edgePairs[];
-	public DFSGraph(int nodes, int startNode){
+	
+	public BFSGraph(int nodes, int startNode) {
 		this.nodes = nodes;
 		this.startNode = startNode;
-		edgePairs = new LinkedList[nodes];
+		this.edgePairs = new LinkedList[nodes]; 
 	}
 	public void addEdge(int nodeA, int nodeB) {
 		if(edgePairs[nodeA] == null) {
 			edgePairs[nodeA] = new LinkedList<>();
 		}
-		edgePairs[startNode].add(nodeB);
+		edgePairs[nodeA].add(nodeB);
 	}
-	public void dfs() {
+	public void bfs() {
 		int visited[] = new int[nodes];
-		traverse(visited, startNode);
+		traverse(visited, startNode, new LinkedList<>());
 	}
-	private void traverse(int[] visited, int node) {
+	private void traverse(int visited[], int node, LinkedList<Integer> queue) {
 		visited[node] = 1;
 		System.out.println(node);
 		for(int nextNode : edgePairs[node]) {
 			if(visited[nextNode] == 0) {
-				traverse(visited, nextNode);
+				queue.push(nextNode);
 			}
 		}
-		
+		Integer dequeuedNode = queue.poll();
+		if(dequeuedNode != null)
+			traverse(visited, dequeuedNode, queue);
 	}
 }

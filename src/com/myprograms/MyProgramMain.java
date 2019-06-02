@@ -3,8 +3,14 @@ package com.myprograms;
 import java.util.Arrays;
 import java.util.List;
 
+import org.omg.Messaging.SyncScopeHelper;
+
 import com.myprograms.gp.CountTriplets;
+import com.myprograms.graphs.BFSGraph;
+import com.myprograms.graphs.DFSCycleDetection;
 import com.myprograms.graphs.DFSGraph;
+import com.myprograms.graphs.Kruskal;
+import com.myprograms.graphs.Prims;
 import com.myprograms.linkedlist.LinkedListOperations;
 
 public class MyProgramMain {
@@ -195,13 +201,48 @@ public class MyProgramMain {
 		
 		/* ---------------------Graph---------------------------------------*/
 		//DFS
-		DFSGraph graph = new DFSGraph(4, 2);
+		/*DFSGraph graph = new DFSGraph(4, 2);
 		graph.addEdge(0, 1);
 		graph.addEdge(0, 2);
 		graph.addEdge(1, 2);
 		graph.addEdge(2, 0);
 		graph.addEdge(2, 3);
 		graph.addEdge(3, 3);
-		graph.dfs();
+		graph.dfs();*/
+		
+		
+		//BFS
+		/*BFSGraph g = new BFSGraph(4, 2); 
+		  
+        g.addEdge(0, 1); 
+        g.addEdge(0, 2); 
+        g.addEdge(1, 2); 
+        g.addEdge(2, 0); 
+        g.addEdge(2, 3); 
+        g.addEdge(3, 3);
+        g.bfs();*/
+	
+		//Kruskal for minimum spanning tree
+		/*Kruskal.Graph graph = new Kruskal.Graph(4);
+		graph.addEdge(0, 1, 10);
+		graph.addEdge(0, 3, 5);
+		graph.addEdge(0, 2, 6);
+		graph.addEdge(1, 3, 15);
+		graph.addEdge(2, 3, 4);
+		Kruskal kruskal = new Kruskal(graph);
+		kruskal.mst();*/
+
+	
+		//DFSCycle detection for directed graph
+		/*DFSCycleDetection.Graph graph  = new DFSCycleDetection.Graph(4);
+		graph.addEdge(0, 1);
+		graph.addEdge(0, 2);
+		graph.addEdge(1, 2);
+		graph.addEdge(2, 0);
+		graph.addEdge(2, 3);
+		
+		DFSCycleDetection cycleDetection = new DFSCycleDetection(graph);
+		System.out.println("Has cycle? "+cycleDetection.detectCycle());*/
+		
 	}
 }
