@@ -104,6 +104,7 @@ public class Kruskal {
 		} else if (parentA.rank > parentB.rank) {
 			parentB.parent = parentA;
 		} else {
+			parentB.parent = parentA;
 			parentA.rank++;
 		}
 
