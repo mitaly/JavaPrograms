@@ -1,10 +1,10 @@
 package com.myprograms.multithreading;
 
-import java.util.Collections;
-import java.util.Map;
-import java.util.SortedMap;
-import java.util.TreeMap;
 import java.util.concurrent.atomic.AtomicLongArray;
+import java.util.concurrent.locks.ReentrantLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock.ReadLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock.WriteLock;
 
 public class ThreadSafe {
 	ThreadLocal<String> myThreadLocalObj = new ThreadLocal<String>();
@@ -35,7 +35,16 @@ public class ThreadSafe {
 //		extrinsicSyn.increment();
 //		System.out.println(extrinsicSyn.get());
 		
+		//ReentrantLock
+//		ReentrantLockDemo reentrantDemo = new ReentrantLockDemo();
+//		reentrantDemo.increment();
+//		System.out.println(reentrantDemo.get());
 		
+		//ReentrantReadWRiteLock
+//		ReentrantReadWriteLockDemo readWriteDemo = new ReentrantReadWriteLockDemo();
+//		readWriteDemo.increment();
+//		readWriteDemo.increment();
+//		System.out.println(readWriteDemo.get());
 	}
 
 	private void threadLocal() throws InterruptedException {
@@ -91,6 +100,48 @@ class ExtrinsicLockingSynchronizedDemo{
 	}
 }
 
+class ReentrantLockDemo{
+	int counter = 0;
+	private final ReentrantLock reentrantLock = new ReentrantLock();
+	
+	void increment() {
+		reentrantLock.lock();
+		try {
+			counter++;
+		}finally{
+			reentrantLock.unlock();
+		}
+	}
+
+	int get() {
+		return counter;
+	}
+}
+
+class ReentrantReadWriteLockDemo{
+	int counter = 0;
+	private final ReentrantReadWriteLock readWriteLock = new ReentrantReadWriteLock();
+	private final ReadLock readLock = readWriteLock.readLock();
+	private final WriteLock writeLock = readWriteLock.writeLock();
+	
+	void increment() {
+		writeLock.lock();
+		try {
+			counter++;
+		}finally {
+			writeLock.unlock();
+		}
+	}
+	
+	int get() {
+		readLock.lock();
+		try {
+			return counter;
+		}finally {
+			readLock.unlock();
+		}
+	}
+}
 class UsingAtomicLongArray {
 	private AtomicLongArray atomic = new AtomicLongArray(20);
 
