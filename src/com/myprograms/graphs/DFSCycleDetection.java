@@ -9,6 +9,7 @@ import java.util.Stack;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+//For Undirected graph
 public class DFSCycleDetection {
 	public static class Graph {
 		private int nodes;

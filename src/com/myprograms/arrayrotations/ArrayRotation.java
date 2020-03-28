@@ -66,5 +66,12 @@ public class ArrayRotation {
 		reverseArray(arr, d, arr.length-1);
 		return arr;
 	}
+	
+	public Integer[] rotate(Integer[] arr, int d) {
+		reverseArray(arr, 0, arr.length-1-d);
+		reverseArray(arr, arr.length-d, arr.length-1);
+		reverseArray(arr, 0, arr.length-1);
+		return arr;
+	}
 }
 	

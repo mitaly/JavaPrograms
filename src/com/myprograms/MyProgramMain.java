@@ -1,10 +1,29 @@
 package com.myprograms;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.function.IntBinaryOperator;
+import java.util.stream.Stream;
 
 import org.omg.Messaging.SyncScopeHelper;
 
+import com.myprograms.arrayrotations.ArrayReverse;
+import com.myprograms.arrayrotations.BinarySearch;
+import com.myprograms.arrayrotations.ClearBitsFromitoZero;
+import com.myprograms.arrayrotations.CountSetBits;
+import com.myprograms.arrayrotations.FlipIthBit;
+import com.myprograms.arrayrotations.GetIthBit;
+import com.myprograms.arrayrotations.MoveAllZeroesTorigth;
+import com.myprograms.arrayrotations.MoveAllzeroesToLeft;
+import com.myprograms.arrayrotations.MoveZeroesToStartNOnesToEnd;
+import com.myprograms.arrayrotations.SearchInSortedNrotated;
+import com.myprograms.arrayrotations.SetIthBit;
 import com.myprograms.gp.CountTriplets;
 import com.myprograms.graphs.BFSGraph;
 import com.myprograms.graphs.DFSCycleDetection;
@@ -13,9 +32,11 @@ import com.myprograms.graphs.Kruskal;
 import com.myprograms.graphs.Prims;
 import com.myprograms.graphs.Prims.Graph;
 import com.myprograms.linkedlist.LinkedListOperations;
+import com.myprograms.logicalproblems.MaxSumSubarray;
+import com.myprograms.string.ReverseString;
 
 public class MyProgramMain {
-	public static void main(String[] args) {
+	public static final void main(String[] args) throws IOException {
 //		Factorial factorial = new Factorial();
 //		System.out.println(factorial.factorial(5));
 	
@@ -155,14 +176,14 @@ public class MyProgramMain {
 		
 //		Convert the array in such a way that if next non-zero number is same as current number,
 //		double its value and replace the next number with 0.
-//		After the modification, rearrange the array such that all 0’s are shifted to the end.
+//		After the modification, rearrange the array such that all 0â€™s are shifted to the end.
 //		Integer[] arr = new Integer[] {2, 2, 0, 4, 0, 8};
 //		DoubleAndZero doubleAndZero = new DoubleAndZero();
 //		doubleAndZero.doubleAndMoveZeroesToEnd(arr);
 //		for(int x:arr) System.out.print(x+" ");
 	
-//		Given two integer arrays of same size, “arr[]” and “index[]”,
-//		reorder elements in “arr[]” according to given index array
+//		Given two integer arrays of same size, â€œarr[]â€� and â€œindex[]â€�,
+//		reorder elements in â€œarr[]â€� according to given index array
 //		Integer[] arr = new Integer[] {50, 40, 70, 60, 90};
 //		Integer[] index = new Integer[] {3,  0,  4,  1,  2};
 //		ReorderAccToIndex reorder = new ReorderAccToIndex();
@@ -178,7 +199,7 @@ public class MyProgramMain {
 //		rearrange.rearrange(arr);
 //		for(int x:arr) System.out.print(x+" ");
 		
-//		Rearrange an array such that ‘arr[j]’ becomes ‘i’ if ‘arr[i]’ is ‘j’ 
+//		Rearrange an array such that â€˜arr[j]â€™ becomes â€˜iâ€™ if â€˜arr[i]â€™ is â€˜jâ€™ 
 //		Integer[] arr = new Integer[] {2, 0, 1, 4, 5, 3};
 //		RearrangeAccToIndex1 r = new RearrangeAccToIndex1();
 //		r.rearrange(arr);
@@ -274,5 +295,51 @@ public class MyProgramMain {
 		DFSCycleDetection cycleDetection = new DFSCycleDetection(graph);
 		System.out.println("Has cycle? "+cycleDetection.detectCycle());*/
 		
+//		MaxSumSubarray maxSumSubarray = new MaxSumSubarray();
+//		ArrayList<Long> ls = maxSumSubarray.maxset(new ArrayList<Long>(Arrays.asList( 1967513926l, 1540383426l, -1303455736l, -521595368l )));
+//		for(long x: ls) {
+//			System.out.print(x+"\t");
+//		}
+		
+//		ArrayReverse.reverse(new int[] {1,2,3,4});
+//		BinarySearch.search(new int[] {1,2,3,4,5}, 5 );
+//		SearchInSortedNrotated.search(new int[] {5, 6, 7, 8, 9, 10, 1, 2, 3}, 58);
+//		MoveAllzeroesToLeft.move(new int[] {1, 2, 0, 4, 3, 0, 5, 0});
+//		MoveAllzeroesToLeft.move1(new int[] { 0, 0, 0, 1, 2, 3});
+//		MoveAllZeroesTorigth.move(new int []  {1, 2, 0, 4, 3, 0, 5, 0});
+//		MoveZeroesToStartNOnesToEnd.move(new int[] {1, 2, 0, 0, 0, 3, 6});
+//		CountSetBits.count(15);
+//		ClearBitsFromitoZero.clear(4, 2);
+//		ClearBitsFromitoZero.turnOfKthBit(4, 2);
+//		FlipIthBit.flip(7, 2);
+//		GetIthBit.get(9,2);
+//		SetIthBit.set(4, 1);
+//		
+//		System.out.println(Runtime.getRuntime().freeMemory()/1024);
+//		System.out.println(Runtime.getRuntime().maxMemory()/1024);
+//		System.out.println(Runtime.getRuntime().totalMemory()/1024);
+//		
+		try {
+			Runtime.getRuntime().exec("notepad");
+		}catch(IOException e) {
+			throw new IOException();
+		}
+		
+//		ArrayReverse ar1 =  new ArrayReverse();
+//		ArrayReverse ar2 = new ArrayReverse();
+//		System.out.println(ar1.hashCode());
+//		System.out.println(ar2.hashCode());
+//		
+		//Throws NumberFormatException
+		/*
+		 * try{ Integer.parseInt("sd"); } catch(NumberFormatException e){ throw new
+		 * NumberFormatException(); } ReverseString.reverse("my name is mitaly");
+		 * ReverseString.reverse1("my name is mitaly");
+		 * ReverseString.reverse2("my name is mitaly");
+		 */
+		
+		ThreadLocal<Integer> thr = new ThreadLocal<Integer>();
+		thr.set(23);
+		thr.get();
 	}
 }
