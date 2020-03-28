@@ -12,8 +12,8 @@ public class ThreadSafe {
 
 	public static void main(String[] args) throws InterruptedException {
 		// each thread will have it's own copy of this variable
-//		ThreadSafe thSafe = new ThreadSafe();
-//		thSafe.threadLocal();
+		ThreadSafe thSafe = new ThreadSafe();
+		thSafe.threadLocal();
 
 		// UsingAtomicLongArray
 //		UsingAtomicLongArray arr = new UsingAtomicLongArray();
@@ -61,6 +61,8 @@ public class ThreadSafe {
 		});
 		th1.start();
 		th2.start();
+		//will throw InterruptedException
+		th1.start();//
 
 		Thread.sleep(2000);
 		// main thread has "hello world" value of threadlocal variable
