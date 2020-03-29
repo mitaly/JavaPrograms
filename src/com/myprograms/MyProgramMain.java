@@ -37,6 +37,9 @@ import com.myprograms.string.ReverseString;
 
 public class MyProgramMain {
 	public static final void main(String[] args) throws IOException {
+		for(String a : args) {
+			System.out.println(a);
+		}
 //		Factorial factorial = new Factorial();
 //		System.out.println(factorial.factorial(5));
 	
