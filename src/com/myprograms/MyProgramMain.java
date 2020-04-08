@@ -319,7 +319,9 @@ public class MyProgramMain {
 //		SetIthBit.set(4, 1);
 //		
 //		System.out.println(Runtime.getRuntime().freeMemory()/1024);
+		//max memory is xmx
 //		System.out.println(Runtime.getRuntime().maxMemory()/1024);
+		//total memory is xms
 //		System.out.println(Runtime.getRuntime().totalMemory()/1024);
 //		
 		try {
@@ -344,5 +346,6 @@ public class MyProgramMain {
 		ThreadLocal<Integer> thr = new ThreadLocal<Integer>();
 		thr.set(23);
 		thr.get();
+		
 	}
 }
