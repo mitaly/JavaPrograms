@@ -1,4 +1,4 @@
-package com.myprograms.ctci.strings;
+package com.myprograms.ctci.chap1strings;
 
 public class URLify {
 	public static void main(String[] args) {

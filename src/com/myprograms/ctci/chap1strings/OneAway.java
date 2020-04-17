@@ -1,4 +1,4 @@
-package com.myprograms.ctci.strings;
+package com.myprograms.ctci.chap1strings;
 
 public class OneAway {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.myprograms.ctci.strings;
+package com.myprograms.ctci.chap1strings;
 
 import java.util.HashSet;
 import java.util.Set;

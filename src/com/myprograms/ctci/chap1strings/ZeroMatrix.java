@@ -1,4 +1,4 @@
-package com.myprograms.ctci.strings;
+package com.myprograms.ctci.chap1strings;
 
 public class ZeroMatrix {
 	public static void main(String[] args) {
@@ -58,6 +58,7 @@ public class ZeroMatrix {
 	 * setting the row and col as -1. the set as 0 at the end
 	 * @param a
 	 */
+	//more processing time
 	private static void set(int[][] a) {
 		int m = a.length;
 		int n = a[0].length;
@@ -86,6 +87,8 @@ public class ZeroMatrix {
 		}
 	}
 	
+	//constant space
+	//decent time
 	private static void set2(int[][] a) {
 		int m = a.length;
 		int n = a[0].length;
